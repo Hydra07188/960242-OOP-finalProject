@@ -6,7 +6,7 @@ public abstract class LibraryItem implements Borrowable {
     protected String id;
     protected String title;
     protected String author;
-    protected double price;
+    protected final double price;
     protected boolean isAvailable;
     protected Member borrowedBy;
     protected LocalDate dueDate;
@@ -33,7 +33,6 @@ public abstract class LibraryItem implements Borrowable {
     public void setDueDate(LocalDate date) { this.dueDate = date; }
     public void setTitle(String title) { this.title = title; }
     public void setAuthor(String author) { this.author = author; }
-    public void setPrice(double price) { this.price = price; }
     public void setAvailable(boolean available) { this.isAvailable = available; }
     public void setBorrowedBy(Member m) { this.borrowedBy = m; }
     public void setBorrowCount(int count) { this.borrowCount = count; } // 📌 สำหรับโหลดไฟล์ CSV
